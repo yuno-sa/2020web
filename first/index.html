@@ -23,37 +23,6 @@
 
     <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
     <button>ユーザを変更</button>
-      
-    <script>
-      let myButton = document.querySelector('button');
-      let myHeading = document.querySelector('h1');
-      function setUserName() {
-        let myName = prompt('あなたの名前を入力してください。');
-        localStorage.setItem('name', myName);
-        myHeading.textContent = 'Mozilla はすばらしいよ、' + myName;
-      }
-      document.querySelector('html').onclick = function() {
-        alert('痛っ! つつくのはやめて!');
-      }
-      
-      let myImage = document.querySelector('img');
-      myImage.onclick = function() {
-        let mySrc = myImage.getAttribute('src');
-        if(mySrc === 'images/firefox-icon.png') {
-          myImage.setAttribute ('src','images/firefox2.png');
-        } else {
-          myImage.setAttribute ('src','images/firefox-icon.png');
-        }
-      }
-      if(!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  let storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Mozilla はすばらしいよ、' + storedName;
-}
-      myButton.onclick = function() {
-  setUserName();
-}
-    </script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
